@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <style>
+        :root{
+  --bg:linear-gradient (135deg, #e8f0f9, #6b8cb5);
+  --card:#ffffff;
+  --accent:#1f7a6b;
+  --muted:#5b6166;
+  --radius:12px;
+  --container:1100px;
+  --gap:20px;
+  --shadow: 0 8px 24px rgba(15,20,20,0.06);
+}
+
+*{
+    box-sizing:border-box
+}
+html,body{
+    height:100%;
+    margin:0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:var(--bg);
+    color:#222
+}
+.container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:20px;
+}
+
+
+
+/* Collections */
+.section-title{
+    margin:18px 0 12px;
+    text-align: center;
+    color:#eff6f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   font-family: 'Courier New', Courier, monospace;
+   background-color: rgba(1, 1, 1, 0.616);
+}
+.collections .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--gap);
+}
+.card{
+    background:var(--card);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background-color: rgb(247, 231, 212);
+}
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background-color: antiquewhite;
+}
+.card-body{
+    padding:12px;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px
+}
+.card-body h3{
+    margin:0;
+    font-size:1rem;
+}
+.muted{
+    color:var(--muted);
+    font-size:0.9rem;
+}
+.price{
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* Responsive */
+
+
+@media (max-width:520px){
+  .nav{display:none}
+  .collections .grid{grid-template-columns:1fr}
+  .header-row{padding:8px 0}
+  .hero-text h1{font-size:1.4rem}
+  .hero-image img{height:200px}
+}
+body{
+    background: linear-gradient(135deg, #c5d6e8, #9ac6fb);
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container h2{
+         font-size: 25px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h3{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container p{
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.price{
+            font-size: 18px;
+            margin: 20px;
+}
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    background-color: #000000ab;
+    color: wheat;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+
+button input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #f9e3aa;
+    color: rgb(78, 90, 38);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:hover {
+    background-color: #ffe18d;
+}
+    </style>
+</head>
+<body>
+  <h2>Featured Accessories</h2>
+    <section id="collections" class="container collections">
+    
+      <div class="grid">
+        <article class="card">
+          <img src="a1.jpg" alt="a1" loading="lazy">
+          <div class="card-body">
+            <h3>Silver Spider Pendant Necklace – Gothic Aesthetic</h3>
+            <p class="muted">Add a bold yet minimal statement to your look with this Silver Spider Pendant Necklace. Featuring a sleek metallic spider charm on a delicate chain, this piece blends gothic vibes with modern minimalism—perfect for edgy, aesthetic, or Y2K-inspired outfits.</p>
+            <div class="price">&#8377;249</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="a2.jpg" alt="a2" loading="lazy">
+          <div class="card-body">
+            <h3>Minimal Silver Geometric Pendant Necklace</h3>
+            <p class="muted">This Minimal Silver Geometric Pendant Necklace offers a sleek and modern design, perfect for adding a subtle touch of elegance to any outfit. Its clean lines and simple shape make it a versatile accessory for both casual and formal looks.</p>
+            <div class="price">&#8377;299</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="a3.jpg" alt="a3" loading="lazy">
+          <div class="card-body">
+            <h3>Triple-Layer Silver Wallet Chain – Streetwear Style</h3>
+            <p class="muted">This Triple-Layer Silver Wallet Chain adds a bold streetwear edge to your outfit. Crafted with durable silver links and designed to hang stylishly from your pocket, it’s a must-have accessory for those who love urban fashion and Y2K aesthetics.</p>
+            <div class="price">&#8377;349</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="a4.jpg" alt="a4" loading="lazy">
+          <div class="card-body">
+            <h3>Minimal Silver Star Pendant Necklace</h3>
+            <p class="muted">This Minimal Silver Star Pendant Necklace features a delicate star charm on a fine silver chain, perfect for adding a subtle celestial touch to your everyday look. Its minimalist design makes it a versatile accessory for any outfit.</p>
+            <div class="price">&#8377;249</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+          </article>
+</section>
+</body>
+</html>

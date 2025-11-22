@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Threads</title>
+    <link rel="stylesheet" href="TT.css">
+    <style>
+        :root{
+            --bg: #f6f1e7;    /* soft beige page background */
+            --panel: #fffaf2; /* lighter panels */
+            --accent: #b8864a; /* warm accent */
+            --muted: #5b4b3d;  /* primary text */
+            --muted-2: #7a6a59; /* secondary text */
+            --border: rgba(91,75,61,0.08);
+        }
+
+        /* Global beige theme */
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--muted);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        a{ color: var(--accent); text-decoration: none; }
+        a:hover{ text-decoration: underline; }
+
+        /* Footer styling */
+        footer{
+            background: linear-gradient(180deg, rgba(255,250,244,0.95), var(--panel));
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding: 28px 16px;
+            box-sizing: border-box;
+        }
+
+        /* Back to top area */
+        .footer-top{
+            text-align:center;
+            margin-bottom: 18px;
+        }
+        .back-to-top{
+            display:inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight:600;
+            box-shadow: 0 4px 10px rgba(184,134,74,0.12);
+            transition: transform .12s ease, box-shadow .12s ease;
+        }
+        .back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 6px 14px rgba(184,134,74,0.16); }
+
+        /* Sitemap columns */
+        .footer-sitemap{
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 6px 8px 18px;
+            box-sizing: border-box;
+        }
+        .footer-column{
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+        .footer-column h4{
+            margin: 0 0 8px;
+            font-size: 1rem;
+            color: var(--muted);
+            letter-spacing: 0.2px;
+        }
+        .footer-column ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column li{
+            margin: 6px 0;
+            font-size: 0.95rem;
+            color: var(--muted-2);
+        }
+        .footer-column li a{
+            color: inherit;
+            opacity: 0.95;
+        }
+        .footer-column li a:hover{
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        /* Footer bottom tools */
+        .footer-tools{
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            box-sizing: border-box;
+        }
+        .locale{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--muted-2);
+        }
+        .locale label{ font-size: 0.92rem; margin-right: 6px; }
+        .locale select{
+            padding: 6px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(91,75,61,0.08);
+            background: var(--panel);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Payment chips */
+        .payments{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--muted-2);
+        }
+        .payment-item{
+            background: var(--panel);
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(91,75,61,0.06);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width:900px){
+            .footer-sitemap{ gap: 12px; }
+            .footer-tools{ flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 16px; }
+            .payments{ width:100%; justify-content: flex-start; flex-wrap:wrap; }
+        }
+        /* Center footer copyright */
+        .footer-tools {
+            justify-content: center;
+        }
+        .locale {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+        @media (max-width:900px) {
+            .footer-tools { align-items: center; }
+        }
+        /* New Arrivals beige theme */
+        main{
+            background: var(--panel);
+            padding: 28px;
+            border-radius: 12px;
+            max-width: 1100px;
+            margin: 24px auto;
+            box-shadow: 0 6px 20px rgba(91,75,61,0.06);
+            border: 1px solid var(--border);
+            box-sizing: border-box;
+        }
+
+        main h1{
+            color: var(--muted);
+            font-size: 1.8rem;
+            margin: 0 0 18px;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+
+        /* Thrift hero image */
+        .thrift img{
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 8px 30px rgba(91,75,61,0.06);
+            border: 1px solid rgba(91,75,61,0.04);
+        }
+
+        /* Product grid as beige cards */
+        .line1, .line2{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 0;
+            margin: 18px 0 0;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .line1 li, .line2 li{
+            background: linear-gradient(180deg, rgba(255,250,244,0.9), var(--panel));
+            border-radius: 10px;
+            padding: 12px;
+            width: 320px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid rgba(91,75,61,0.06);
+            box-shadow: 0 6px 18px rgba(91,75,61,0.04);
+            color: var(--muted-2);
+            font-weight: 600;
+        }
+
+        .line1 li img, .line2 li img{
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .line1 li a, .line2 li a{
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 900px){
+            .line1 li, .line2 li{ width: calc(50% - 24px); }
+            .thrift img{ height: 280px; }
+        }
+
+        @media (max-width: 600px){
+            .line1 li, .line2 li{ width: 100%; }
+            main{ padding: 16px; }
+            .thrift img{ height: 200px; }
+            .line1 li img, .line2 li img{ height: 300px; }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="logo">
+          <img height="150px" width="100%" src="nav.png" alt="logo">
+   </div><br>
+<hr>
+<br>
+<nav>
+<ul class="navlist">
+    <li> <a href="jacket.html" > Jackets</a></li>
+    <li><a href="hoodie.html">Hoodies</a></li>
+    <li><a href="sweat.html" >Sweatshirts</a></li>
+    <li><a href="tshirt.html" >T-Shirts</a></li>
+    <li><a href="jeans.html" >Baggy jeans</a></li>
+    <li><a href="accessories.html" >Accessories</a></li>
+</ul><br>
+<hr>
+<br>
+    <div class="search">
+        <input list="search" placeholder="Search the product here...">
+        <datalist id="search">
+            <option value="Hoodie">
+                <option value="Hoodies">
+                    <option value="Jacket">
+                        <option value="Jackets">
+                            <option value="T-Shirt">
+                                <option value="T-Shirts">
+                                    <option value="Baggy Jeans">
+                                        <option value="Accessories">
+                                            <option value="Sweatshirt">
+                                                <option value="Sweatshirts">
+        </datalist>
+        <button>Search</button>
+    </div>
+</nav>
+<br>
+<hr>
+<br>
+<main>
+<div class="thrift">
+       <img src="Thrift (2).png" alt="thrift" width="100%" height="400px">
+</div><br><br>
+<h1>New Arrivals</h1>
+<br><br>
+<hr>
+<ul class="line1">
+<li class="1"><a href="hoodie.html" ><img src="ho1.jpg" width="400" height="500" alt="hoodie"></a><br><br>Hoodies</li><br>
+<li class="2"><a href="sweat.html" ><img src="se3.jpg" width="400" height="500" alt="sweatshirt"></a><br><br>Sweatshirts</li><br>
+<li class="3"><a href="jacket.html"><img src="ja1.jpg" width="400" height="500" alt="jacket"></a><br><br>Jackets</li><br>
+</ul>
+
+<ul class="line2">
+<li class="4"><a href="tshirt.html"><img src="t1.jpg" width="400" height="500" alt="tshirt"></a><br><br>T-Shirts</li><br>
+<li class="5"><a href="jeans.html" ><img src="je1.jpg" width="400" height="500" alt="baggy"></a><br><br>Baggy jeans</li><br>
+<li class="6"><a href="accessories.html"><img src="a2.jpg" width="400" height="500" alt="accessories"></a><br><br>Accessories</li><br>
+
+</ul>
+</main>
+
+<footer>
+           
+    <div class="footer-top">
+        <a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+    </div>
+
+    <div class="footer-sitemap" role="navigation" aria-label="Footer">
+      
+        <div class="footer-column">
+            <h4>Shop with Us</h4>
+            <ul>
+                <li><a href="jacket.html">Jackets</a></li>
+                <li><a href="hoodie.html">Hoodies</a></li>
+                <li><a href="tshirt.html">T-Shirts</a></li>
+                <li><a href="jeans.html">Baggy Jeans</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="sweat.html">Sweatshirts</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Payment & Delivery</h4>
+            <ul>
+                <li><a href="#">Payment Methods</a></li>
+                <li><a href="#">Shipping Rates & Policies</a></li>
+                <li><a href="#">Track Your Order</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Help & Settings</h4>
+            <ul>
+                <li><a href="mailto:timelessthreads@gmail.com">Email us</a></li>
+                <li><a href="tel:+1234567890">Call us</a></li>
+                <li><a href="https://instagram.com/timelessthreads" target="_blank">Follow us on Instagram</a></li>
+                <li><a href="tel:+1234567890">Message us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-tools">
+        <div class="locale">
+            <span>&copy; <span id="year"></span> Timeless Threads. All rights reserved.</span>
+        </div>
+        
+    </div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+       
+</footer>
+</body>
+</html>

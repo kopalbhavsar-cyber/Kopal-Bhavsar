@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweatshirts</title>
+    <style>
+        :root{
+  --bg:linear-gradient (135deg, #e8f0f9, #6b8cb5);
+  --card:#ffffff;
+  --accent:#1f7a6b;
+  --muted:#5b6166;
+  --radius:12px;
+  --container:1100px;
+  --gap:20px;
+  --shadow: 0 8px 24px rgba(15,20,20,0.06);
+}
+
+*{
+    box-sizing:border-box
+}
+html,body{
+    height:100%;
+    margin:0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:var(--bg);
+    color:#222
+}
+.container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:20px;
+}
+
+
+
+/* Collections */
+.section-title{
+    margin:18px 0 12px;
+    text-align: center;
+    color:#eff6f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   font-family: 'Courier New', Courier, monospace;
+   background-color: rgba(1, 1, 1, 0.616);
+}
+.collections .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--gap);
+}
+.card{
+    background:var(--card);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background-color: rgb(247, 231, 212);
+}
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background-color: antiquewhite;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card img:hover {
+    transform: scale(1.05);
+}
+.card-body{
+    padding:12px;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px
+}
+.card-body h3{
+    margin:0;
+    font-size:1rem;
+}
+.muted{
+    color:var(--muted);
+    font-size:0.9rem;
+}
+.price{
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* Responsive */
+
+
+@media (max-width:520px){
+  .nav{display:none}
+  .collections .grid{grid-template-columns:1fr}
+  .header-row{padding:8px 0}
+  .hero-text h1{font-size:1.4rem}
+  .hero-image img{height:200px}
+}
+body{
+    background: linear-gradient(135deg, #c5d6e8, #9ac6fb);
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container h2{
+         font-size: 25px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h3{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container p{
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.price{
+            font-size: 18px;
+            margin: 20px;
+}
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    background-color: #000000ab;
+    color: wheat;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+button input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #f9e3aa;
+    color: rgb(78, 90, 38);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:hover {
+    background-color: #ffe18d;
+}
+
+    </style>
+</head>
+<body>
+  <h2>Featured Sweatshirts</h2>
+    <section id="collections" class="container collections">
+    
+      <div class="grid">
+
+        <article class="card">
+          <img src="se1.jpg" alt="se1" loading="lazy">
+          <div class="card-body">
+            <h3>Monochrome Splash Sweatshirt</h3>
+            <p class="muted">The Monochrome Splash Sweatshirt features a bold black-and-white abstract splash design that makes it stand out instantly. With its soft fabric, relaxed fit, and eye-catching contrast patches, this piece adds a modern, artsy streetwear vibe to any outfit. Perfect for cozy days, school fits, or layering in winte</p>
+            <div class="price">&#8377;599</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="se2.jpg" alt="se2" loading="lazy">
+          <div class="card-body">
+            <h3>Blue Flame Crest Sweatshirt</h3>
+            <p class="muted">Bring bold energy to your wardrobe with the Blue Flame Crest Sweatshirt. This piece features a striking gradient flame design rising from the hem in shades of sky blue and deep blue, perfectly contrasted against the crisp white upper half. Soft, comfy, and stylish — it’s an ideal pick for those who love eye-catching, modern streetwear.</p>
+            <div class="price">&#8377;599</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="se3.jpg" alt="se3" loading="lazy">
+          <div class="card-body">
+            <h3>Storm Swirl Patch Sweatshirt</h3>
+            <p class="muted">The Storm Swirl Patch Sweatshirt brings a bold, modern streetwear vibe with its unique abstract swirl patches in shades of navy, white, and soft grey. The center features a standout NIKE logo, blending perfectly with the flowing patchwork design across the chest and sleeves. Made with soft fleece fabric, it’s cozy, stylish, and perfect for everyday wear.</p>
+            <div class="price">&#8377;599</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="se4.jpg" alt="se4" loading="lazy">
+          <div class="card-body">
+            <h3>Mint Splash Air Sweatshirt</h3>
+            <p class="muted">The Mint Splash Air Sweatshirt features a bright, refreshing green palette with an abstract splash patchwork design across the chest and sleeves. At the center, a bold Air logo with a neon green swoosh makes the piece stand out. Soft, stylish, and super comfy — this sweatshirt brings together streetwear energy with a fun, playful vibe.</p>
+            <div class="price">&#8377;599</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+          </article>
+</section>
+</body>
+</html>
+

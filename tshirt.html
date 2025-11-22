@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirts</title>
+    <style>
+        :root{
+  --bg:linear-gradient (135deg, #e8f0f9, #6b8cb5);
+  --card:#ffffff;
+  --accent:#1f7a6b;
+  --muted:#5b6166;
+  --radius:12px;
+  --container:1100px;
+  --gap:20px;
+  --shadow: 0 8px 24px rgba(15,20,20,0.06);
+}
+
+*{
+    box-sizing:border-box
+}
+html,body{
+    height:100%;
+    margin:0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:var(--bg);
+    color:#222
+}
+.container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:20px;
+}
+
+
+
+/* Collections */
+.section-title{
+    margin:18px 0 12px;
+    text-align: center;
+    color:#eff6f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   font-family: 'Courier New', Courier, monospace;
+   background-color: rgba(1, 1, 1, 0.616);
+}
+.collections .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--gap);
+}
+.card{
+    background:var(--card);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background-color: rgb(247, 231, 212);
+}
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background-color: antiquewhite;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card img:hover {
+    transform: scale(1.05);
+}
+  
+.card-body{
+    padding:12px;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px
+}
+.card-body h3{
+    margin:0;
+    font-size:1rem;
+}
+.muted{
+    color:var(--muted);
+    font-size:0.9rem;
+}
+.price{
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* Responsive */
+
+
+@media (max-width:520px){
+  .nav{display:none}
+  .collections .grid{grid-template-columns:1fr}
+  .header-row{padding:8px 0}
+  .hero-text h1{font-size:1.4rem}
+  .hero-image img{height:200px}
+}
+body{
+    background: linear-gradient(135deg, #c5d6e8, #9ac6fb);
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container h2{
+         font-size: 25px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h3{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container p{
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.price{
+            font-size: 18px;
+            margin: 20px;
+}
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    background-color: #000000ab;
+    color: wheat;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+button input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #f9e3aa;
+    color: rgb(78, 90, 38);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:hover {
+    background-color: #ffe18d;
+}
+
+    </style>
+</head>
+<body>
+  <h2>Featured T-shirts</h2>
+    <section id="collections" class="container collections">
+    
+      <div class="grid">
+        <article class="card">
+          <img src="t1.jpg" alt="t1" loading="lazy">
+          <div class="card-body">
+            <h3>Vintage Classic Car Graphic Tee – White</h3>
+            <p class="muted">Add a timeless vibe to your wardrobe with this Vintage Classic Car Graphic Tee. Featuring a bold retro car print and inspiring typography, this tee brings together nostalgia and modern street style perfectly.</p>
+            <div class="price">&#8377;349</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="t2.jpg" alt="t2" loading="lazy">
+          <div class="card-body">
+            <h3>McLaren Racing Graphic Tee – White</h3>
+            <p class="muted">Give your outfit a bold motorsport vibe with this McLaren Racing Graphic Tee. Featuring a striking print of the iconic McLaren F1 supercar, this tee brings speed, style, and retro racing culture together in one perfect piece.</p>
+            <div class="price">&#8377;299</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="t3.jpg" alt="t3" loading="lazy">
+          <div class="card-body">
+            <h3>Vintage Nirvana Kurt Cobain Graphic Tee – Washed Black</h3>
+            <p class="muted">Channel pure grunge energy with this Vintage Nirvana Graphic Tee, featuring an iconic sketch-style print of Kurt Cobain on a washed black base. The distressed look gives it that authentic retro band-tee vibe—perfect for anyone who loves rock, grunge fashion, or statement streetwear</p>
+            <div class="price">&#8377;399</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="t4.jpg" alt="t4" loading="lazy">
+          <div class="card-body">
+            <h3>Attack on Titan Oversized Graphic Tee – Washed Brown</h3>
+            <p class="muted">Step into the world of anime aesthetics with this Attack on Titan Graphic Tee, featuring a bold sketch-style Titan design on a washed brown base. The minimal front logo + dramatic side artwork gives it that perfect streetwear–meets–anime vibe.</p>
+            <div class="price">&#8377;349</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+          </article>
+</section>
+</body>
+</html>

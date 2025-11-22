@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodies</title>
+    <style>
+      :root{
+  --bg:linear-gradient (135deg, #e8f0f9, #6b8cb5);
+  --card:#ffffff;
+  --accent:#1f7a6b;
+  --muted:#5b6166;
+  --radius:12px;
+  --container:1100px;
+  --gap:20px;
+  --shadow: 0 8px 24px rgba(15,20,20,0.06);
+}
+
+*{
+    box-sizing:border-box
+}
+html,body{
+    height:100%;
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:#222
+}
+.container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:20px;
+}
+
+
+
+/* Collections */
+.section-title{
+    margin:18px 0 12px;
+    color:#0e2b27;
+}
+.collections .grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--gap);
+}
+.card{
+    background:var(--card);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background-color: rgb(247, 231, 212);
+}
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    background-color: antiquewhite;
+}
+.card-body{
+    padding:12px;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px
+}
+.card-body h3{
+    margin:0;
+    font-size:1rem;
+}
+.muted{
+    color:var(--muted);
+    font-size:0.9rem;
+}
+.price{
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* Responsive */
+
+
+@media (max-width:520px){
+  .nav{display:none}
+  .collections .grid{grid-template-columns:1fr}
+  .header-row{padding:8px 0}
+  .hero-text h1{font-size:1.4rem}
+  .hero-image img{height:200px}
+}
+body{
+    background: linear-gradient(135deg, #c5d6e8, #9ac6fb);
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container h2{
+         font-size: 25px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container h3{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container p{
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.price{
+            font-size: 18px;
+            margin: 20px;
+}
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    background-color: #000000ab;
+    color: wheat;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+button input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 8px 12px;
+    font-size: 15px;
+    background-color: #f9e3aa;
+    color: rgb(78, 90, 38);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:hover {
+    background-color: #ffe18d;
+}
+    </style>
+</head>
+<body>
+         <h2>Featured Hoodies</h2>
+   <section id="collections" class="container collections">
+     
+      <div class="grid">
+        <article class="card">
+          <img src="ho1.jpg" alt="hoodie1" loading="lazy">
+          <div class="card-body">
+            <h3>Shadow Spider Graphic Hoodie</h3>
+            <p class="muted">Step up your streetwear game with this bold Shadow Spider Graphic Hoodie. Designed in a deep black shade, it features an oversized white spider print that gives it a unique, edgy vibe. The hoodie comes with a cozy kangaroo pocket, soft inner lining, and a relaxed fit—perfect for everyday wear, winter layering, or adding a statement piece to your outfit.</p>
+            <div class="price">&#8377;699</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="ho2.jpg" alt="hoodie2" loading="lazy">
+          <div class="card-body">
+            <h3>Mocha Flame Oversized Hoodie</h3>
+            <p class="muted">Turn up your streetwear style with this Mocha Flame Oversized Hoodie. Featuring a unique two-tone brown and cream design, the hoodie stands out with its bold flame pattern rising from the hem. The soft fabric and relaxed fit make it perfect for cozy days, casual outfits, or adding a trendy statement piece to your wardrobe.</p>
+            <div class="price">&#8377;649</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="ho3.jpg" alt="hoodie3" loading="lazy">
+          <div class="card-body">
+            <h3>Forest Drip Skull Hoodie</h3>
+            <p class="muted">Make a bold statement with this Forest Drip Skull Hoodie, designed with a unique melted-skull graphic across the chest and sleeves. The mix of deep olive green and jet black gives it a dark, earthy streetwear vibe. Soft on the inside and stylish on the outside, this hoodie is perfect for anyone who loves edgy fashion with a cool, laid-back fit.</p>
+            <div class="price">&#8377;749</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="ho4.jpg" alt="hoodie4" loading="lazy">
+          <div class="card-body">
+            <h3>Sand Melt Two-Tone Hoodie</h3>
+            <p class="muted">This Sand Melt Two-Tone Hoodie features a super unique melting-blob pattern that blends warm sand brown with deep black. The playful cut-out look across the chest and sleeves adds an eye-catching streetwear vibe. Soft, cozy, and stylish—this hoodie is perfect for anyone who loves bold, artsy fashion pieces.</p>
+            <div class="price">&#8377;649</div>
+            <a href="button1.html" target="_blank"><button>Buy</button></a>
+          </div>
+</article>
+</section>
+   
+</body>
+</html>
